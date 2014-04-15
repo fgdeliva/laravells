@@ -17,5 +17,6 @@ Route::get('/', function()
 });
 
 Route::get('authors', array('as'=>'authors', 'uses'=>'AuthorController@getIndex'));
-Route::get('authors/{id}', array('as'=>'author', 'uses'=>'AuthorController@getView'));
+Route::get('author/{id}', array('as'=>'author', 'uses'=>'AuthorController@getView'));
 Route::get('authors/new', array('as'=>'new_author', 'uses'=>'AuthorController@getNew'));
+Route::post('authors/create', array('uses'=>'AuthorController@postCreate'));
